@@ -142,12 +142,36 @@ urlpatterns = [
     path('', views.courses)
 ]
 ``` 
-now run
+### now run
 
 ```bash
 python manage.py runserver
 ```
 এখন print করবে -> welcome to django 
+
+
+## project structure explain
+* studyMart --- এটা outer প্রজেক্ট
+  * course  --- এটা application এর ভিতরে অনেক file আছে 
+    * -pycache --- এটা cache
+    * migration --- এটা পরে দেখব
+    * _init_py --- এটা python package
+    * admin.py --- আমরা যে model ক্রিয়েট করব । সেটা এখানে রেজিস্টার করব । এটা ডাটাবেজ এ শো হবে ।
+    * apps.py  --- এখানে app কে configure করা হয় ।
+    * models.py --- আমাদের ডাটাবেজ রিলেটেড কাজ করব । orm রিলেটেড কাজ করব
+    * tests.py --- এটা unit test
+    * veiws.py  --- এখানে আউটপুটা দেখতে পাই । এটা আমরা connect করছি inner project এ urls.py এর সাথে ।
+    পরে আমরা প্রতেকটা application এ আমরা একটা একটা urls.py লিখব  । 
+  * studyMart ---- এটা inner প্রজেক্ট
+    * _pycache ---- এটা project cache . এটা সার্ভার রান করলে 
+    * -init_py --- এটা python প্যাকেজ 
+    * asgi.py  --- 
+    * setting.py  --- এখানে applicaion কে connect করবো
+    * urls.py  --- application এর মধ্যে views থাকে ওটাকে কল দিবো , সাথে path ta বলে দিতে হয় ।
+    * wsgi.py  --- web server host করতে কাজে লাগে ।
+    * dbsqlite3 --- ডাটাবেজে আমরা কি করছি , এটা আমরা দেখতে পারব
+  * manage.py  --- এটা ব্যবহার করে আমরা সার্ভার রান করতেছি
+  * Readme.md
 
 
 
