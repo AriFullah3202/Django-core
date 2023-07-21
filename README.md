@@ -43,6 +43,7 @@
 
 ## difference between MVT VS MVC
 ![PICTURE](Screenshot%202023-07-21%20123924.png)
+![PICTURE](Screenshot%202023-07-21%20125518.png)
 
 
 
