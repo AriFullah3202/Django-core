@@ -1,7 +1,48 @@
+* [what is Django](#what-is-django)
+   * [why Django](#why-django)
+   * [how to works](#how-to-works-django)
+   * [what is MVT]()
 * [Extention for Django](#extention-for-django)
 * [Install Django](#install-django)
 * [Create Django project](#create-django-project-create)
-* []
+* [explain folder structure and how it work](#project-structure-explain)
+* [install python virtually](#django-install-virtually)
+* [interpreter setup](#interpreter-setup)
+
+
+## what is Django
+**Django is a web application framework written in Python programming language. Django helps eliminate repetitive tasks making the development process an easy and time saving experience.**
+
+
+## why Django
+* uilt With Python So Easy to Learn
+* Cross-Platform
+**এটি windows , linux , mac কাজ করে , মানে এখন আমরা windows এ run করর কিছুদিন পর linux , mac রান করাতো পারব**
+* Open Source and Huge Community Support
+* Security
+* Good Documentation
+
+## how to works django
+**Django is based on MVT architecture. MVT is a software design pattern for developing a web application.**
+**Django MVT pattern ডিজাইন প্যার্টান ফলো করে । মানে Model View Templete**
+
+## why is MVT
+**MVT web applicattion জন্য হল সফটওয়ার ডিজাইন প্যাটান ।**
+##### MVT হল Model View Templete
+* Model
+  manuplate data , maintain data এবং database handle করার জন্য মডেল ব্যবহার করা হয় ।
+* view 
+  যখন user রিকোয়েস্ট করে তখন এখানে আসে এবং return response
+* Template 
+  একটা website এর ডিজাইন গুলো এই টেম্পে্লেটে ব্যবহার করা হয় ।
+## here is diagram
+![Alt text](Screenshot%202023-07-21%20123318.png)
+
+## difference between MVT VS MVC
+![PICTURE](Screenshot%202023-07-21%20123924.png)
+
+
+
 
 ## Extention for Django
 আপনি আপনার vscode গিয়ে extention icon ক্লিক করুন । নিচের নাম search করে install দিতে হবে ।
@@ -35,6 +76,7 @@ django-admin --version
 
 ```bash
 pip install Django
+pip uninstall Django
 ```
 install করার পর চেক করুন 
 ```bash
@@ -172,15 +214,33 @@ python manage.py runserver
     * dbsqlite3 --- ডাটাবেজে আমরা কি করছি , এটা আমরা দেখতে পারব
   * manage.py  --- এটা ব্যবহার করে আমরা সার্ভার রান করতেছি
   * Readme.md
-
-
-
-
-
-
-
-
  
+## Django install virtually
+**আগে Django golbally আনইনস্টল করতে হবে । ** `pip uninstall Django` তারপর `terminal` এ `cd ..` দিয়ে এক `folder` পেছনে গিয়ে যেতে হবে 
+
+**তারপর নিচের কমান্ডটা দিতে হবে**
+**একটা `env`ইনস্টল হয়ে যাবে ।**
+**তারপর ওই folder ‌`Scripts` ফোল্ডারে যেতে হবে ।**
+**`env`কে active করতে হবে ।**
+**`dir` দিলে দেখা যাবে এখানে `./activate` নামে folder আছে  ওটা `./activate` কমান্ড দিতে হবে । তারপর Django install দিতে হবে**
+
+```bash
+python -m venv env
+cd env/Scripts
+./activate ## output will be --- (env) PS H:\Project\Python\first-django\env\Scripts>
+pip install Djangowh
+```
+```bash
+cd ..
+cd ..
+cd studymart
+python manage.py runserver
+```
+## interpreter setup 
+[this is document for interpreter setup](https://www.alphr.com/vs-code-change-python-interpreter/)
+
+
+
 
 
 
